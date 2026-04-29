@@ -59,7 +59,9 @@ function IngredientRow({
           }
         >
           <SelectTrigger className="w-full">
-            <SelectValue placeholder="Select ingredient..." />
+            <SelectValue placeholder="Select ingredient...">
+              {selectedIngredient?.name ?? ingredient.ingredient_id}
+            </SelectValue>
           </SelectTrigger>
           <SelectContent>
             {availableIngredients.map((ing) => (
