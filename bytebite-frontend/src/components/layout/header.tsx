@@ -105,16 +105,18 @@ export function Header() {
           {/* Desktop User Menu */}
           <div className="hidden md:block">
             <DropdownMenu>
-              <DropdownMenuTrigger>
-                <Button variant="ghost" size="sm" className="gap-2">
-                  <div className="flex h-7 w-7 items-center justify-center rounded-full bg-muted">
-                    <User className="h-4 w-4 text-muted-foreground" />
-                  </div>
-                  <span className="max-w-[120px] truncate text-sm">
-                    {user?.email ?? 'User'}
-                  </span>
-                </Button>
-              </DropdownMenuTrigger>
+              <DropdownMenuTrigger
+                render={
+                  <Button variant="ghost" size="sm" className="gap-2">
+                    <div className="flex h-7 w-7 items-center justify-center rounded-full bg-muted">
+                      <User className="h-4 w-4 text-muted-foreground" />
+                    </div>
+                    <span className="max-w-[120px] truncate text-sm">
+                      {user?.email ?? 'User'}
+                    </span>
+                  </Button>
+                }
+              />
               <DropdownMenuContent align="end" className="w-56">
                 <DropdownMenuLabel className="font-normal">
                   <div className="flex flex-col gap-1">
